@@ -10,12 +10,12 @@ The Whatsnexx [ticketbus](https://github.com/whatsnexx/whatsnexx.github.com/wiki
 
 <table width="100%" border="1px">
 <tr><th align="left">Attribute</th><th align="left">Type</th><th align="left">Description</th></tr>
-<tr><td>Account Id</td><td>GUID</td><td> Provided by Whatsnexx.</td></tr>
-<tr><td>Username:</td><td>GUID</td><td>Provided by Whatsnexx.</td></tr>
-<tr><td>Password:</td><td>GUID</td><td>Provided by Whatsnexx.</td></tr>
+<tr><td>Account Id</td><td>UUID</td><td> Provided by Whatsnexx.</td></tr>
+<tr><td>Username:</td><td>UUID</td><td>Provided by Whatsnexx.</td></tr>
+<tr><td>Password:</td><td>UUID</td><td>Provided by Whatsnexx.</td></tr>
 <tr><td>TermName:</td><td>string</td><Td>This is the name of the event that is to be triggered by the send event.</td>
 <tr><td>SubjectCode:</td><td>string</td><Td>The unique identifier for your [subject](). This usually represents <b>who</b> you would like to send the event to.</td></tr>
-<tr><td>SubjectTypeId:</td><td>GUID</td><td>A unique identitfier for the subject type. The subject type defines the context under which events are sent.</td></tr>
+<tr><td>SubjectTypeId:</td><td>UUID</td><td>A unique identitfier for the subject type. The subject type defines the context under which events are sent.</td></tr>
 <tr><td>ExecutionEnvironment:</td><td>TicketBusService.ExecutionEnvironments</td><td>Specifies the Whatsnexx environment you are sending the event request. A <b>Constellation</b> must exist in the chosen environment for the event to be triggered. The available Environments are: Test, Stage, and Production.</td></tr>
 <tr><td>Attributes:</td><td>TicketBusService.Attributes[]</td><Td>A list of attributes that are used by the event.</td></tr>
 </table>
