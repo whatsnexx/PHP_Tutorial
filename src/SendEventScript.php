@@ -84,6 +84,6 @@ if (!($xml = strstr($response, '<?xml'))) {
 
 // Output the XML
 echo htmlspecialchars($xml, ENT_QUOTES);
-
+echo $response;
 
 ?>
