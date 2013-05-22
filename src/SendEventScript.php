@@ -21,7 +21,7 @@ function getServiceUrl(
 
 
 //Create service URL
-$api_service_uri = getServiceUrl($api_base_service_url,'SendEvent','00000000-0000-0000-0000-000000000001','00000000-0000-0000-0000-000000000001','TestEvent','Stage','testing123');
+$api_service_uri = getServiceUrl($api_base_service_url,'SendEvent','{accountId}','{subjectTypeId}','TestEvent','Stage','testing123');
 
 //Build request attributes
 $xml = '<AttributeList xmlns="http://schemas.whatsnexx.com/v1/tbx/">
@@ -33,7 +33,7 @@ $xml = '<AttributeList xmlns="http://schemas.whatsnexx.com/v1/tbx/">
 
 
 $session = curl_init($api_service_uri);
-$authorization=base64_encode('00000000-0000-0000-0000-000000000001:MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAx');
+$authorization=base64_encode('{username}:{password}');
 
 curl_setopt($session, CURLOPT_HEADER, 1);
 curl_setopt($session, CURLOPT_SSL_VERIFYHOST, 0);
