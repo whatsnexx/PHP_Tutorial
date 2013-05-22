@@ -5,7 +5,7 @@
 error_reporting(E_ALL);
 
 /*configuration*/
-$api_base_service_url = 'https://localhost/TicketBusService/Rest/TicketBusService.svc/';
+$api_base_service_url = 'https://ticketbus.whatsnexx.com/Rest/TicketBusService.svc/';
  
 function getServiceUrl(
 				$api_base_service_url,
