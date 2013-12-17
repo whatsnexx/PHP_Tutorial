@@ -38,7 +38,7 @@ function getServiceUrl(
 				$term_name,
 				$execution_environment,
 				$subject_code)  {
-	$url = $api_base_service_url.$api_method_name.'/'.$accountid.'/'.$subject_type_id.'/'.$term_name.'/'.$execution_environment.'/'.$subject_code.'/';
+	$url = $api_base_service_url.'/'.$api_method_name.'/'.$accountid.'/'.$subject_type_id.'/'.$term_name.'/'.$execution_environment.'/'.$subject_code;
 	return ($url);
 }
 
