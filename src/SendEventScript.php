@@ -5,7 +5,7 @@
 error_reporting(E_ALL);
 
 /*configuration*/
-$api_base_service_url = 'https://ticketbus.whatsnexx.com/Rest/TicketBusService.svc/';
+$api_base_service_url = 'https://ticketbus.whatsnexx.com/Rest/TicketBusService.svc';
  
 function getServiceUrl(
 				$api_base_service_url,
@@ -15,7 +15,7 @@ function getServiceUrl(
 				$term_name,
 				$execution_environment,
 				$subject_code)  {
-	$url = $api_base_service_url.$api_method_name.'/'.$accountid.'/'.$subject_type_id.'/'.$term_name.'/'.$execution_environment.'/'.$subject_code;
+	$url = $api_base_service_url.'/'.$api_method_name.'/'.$accountid.'/'.$subject_type_id.'/'.$term_name.'/'.$execution_environment.'/'.$subject_code;
 	return ($url);
 }
 
