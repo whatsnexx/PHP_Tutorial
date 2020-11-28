@@ -23,7 +23,7 @@ The Whatsnexx [ticketbus](https://github.com/whatsnexx/whatsnexx.github.com/wiki
 
 Steps
 ----------------
-###1.  Construct the RESTful URI.  
+### 1.  Construct the RESTful URI.  
 <b>"https:// ticketbus.whatsnexx.com/Rest/TicketBusService.svc/SendEvent/ {accountId}/{subjectTypeId}/{termName}/{executionEnvironment}/{subjectCode}".</b>
 
 ```php
@@ -46,7 +46,7 @@ function getServiceUrl(
 //Create service URL
 $api_service_uri = getServiceUrl($api_base_service_url,'SendEvent','{accountId}','{subjectTypeId}','TestEvent','Stage','testing123');   
 ```
-###2. Define the Event Attributes
+### 2. Define the Event Attributes
 
 A whatsnexx ticket may have a number of attributes defined. The <b>Attribute</b>s are defined in an XML format. The xmlns ( [namespace](http://www.w3schools.com/tags/att_html_xmlns.asp) ) '<i>http://schemas.whatsnexx.com/v1/tbx/</i>' must be specified in the <b>AttributeList</b> tag.
 
@@ -60,8 +60,8 @@ A whatsnexx ticket may have a number of attributes defined. The <b>Attribute</b>
  </AttributeList>
 ```
 
-###3. Setup and execute HTTP request using [cURL](http://php.net/manual/en/book.curl.php) libraries.
-######Note: $authorization is added to the request header after it is encoded.
+### 3. Setup and execute HTTP request using [cURL](http://php.net/manual/en/book.curl.php) libraries.
+###### Note: $authorization is added to the request header after it is encoded.
 ```php
 $session = curl_init($api_service_uri);
 $authorization=base64_encode('{username}:{password}');
@@ -79,7 +79,7 @@ curl_setopt($session, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec($session);
 curl_close($session);
 ```
-###4. Check response.
+### 4. Check response.
 ```php
 //Get HTTP Status code from the response
 $status_code = array();
